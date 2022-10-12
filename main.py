@@ -94,9 +94,11 @@ def query_data(cities, max_values, min_values, is_snowing, json_parser_thread):
                     result_counter += 1
                 elif inputs[0] == "man":
                     display_user_instructions()
+                    successful_query = True
                 elif inputs[0] == "location":
                     for city in cities:
                         print(city)
+                    successful_query = True
                 if not successful_query:
                     print("Please enter a valid query. Type \"man\" for help.")
         else:
